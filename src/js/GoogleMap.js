@@ -17,10 +17,7 @@ class GoogleMap {
 
   // Initialiser la map
   initMap() {
-    //Permettre la géolocaliation du navigateur
-    /*const x = navigator.geolocation;
-    // Appeler la méthode pour succes ou echec
-    x.getCurrentPosition(this.createMap, this.failure);*/
+    // Définir une position
     const pos = {
       coords: {
         latitude: 48.8871668,
@@ -28,7 +25,6 @@ class GoogleMap {
       },
     };
     this.createMap(pos);
-    // REMETTRE LA GEOLOC DU NAVIGATOR QUAND CONNEXION OK
   }
 
   // Méthode pour créer la map
