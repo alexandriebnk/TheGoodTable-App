@@ -11,7 +11,8 @@
     }
 
     @include respondTo(desktop) {
-        width: 37%;
+        //width: 37%;
+        width: 50%;
     }
 
     @include respondTo(big-desktop) {
@@ -47,13 +48,22 @@
             width: 55%;
         }
 
+        @include respondTo(desktop) {
+            width: auto;
+            margin-left: 2rem;
+        }
+
         &-light {
+            height: 2.2rem;
+            width: 2.2rem;
+            margin-top: 1.5rem;
             transform: scale(1.1);
             opacity: .5;
             cursor: pointer;
             
             @include respondTo(tablet) {
                 transform: scale(1.9);
+                margin: 1.5rem .9rem 0 0;
             }
 
             @include respondTo(tablet-landscape) {
@@ -62,8 +72,8 @@
             }
 
             @include respondTo(desktop) {
-                transform: scale(1.2);
-                margin-right: .9rem;
+                transform: scale(1.5);
+                margin: 1.5rem .9rem 0 0;
             }
 
             @include respondTo(big-desktop) {

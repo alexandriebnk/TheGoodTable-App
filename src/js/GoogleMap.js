@@ -43,28 +43,23 @@ class GoogleMap {
       zoom: 16,
     };
     // Insérer map dans HTML
-    this.googleMap = new google.maps.Map(
-      this.mapContainer,
-      mapOptions,
-    );
+    this.googleMap = new google.maps.Map(this.mapContainer, mapOptions);
     // Mettre un marqueur de couleur différente pour position user
     new google.maps.Marker({
       position: coordinates,
       map: this.googleMap,
       icon: {
-        url: 'http://maps.google.com/mapfiles/ms/icons/pink-dot.png',
+        url: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png",
       },
     });
     // Créer requête avec caractéritiques pour recherche GooglePlaces
     const request = {
       location: coordinates,
-      radius: '500',
+      radius: "500",
       type: this.type,
     };
     // Relier Google Places à la map dans le DOM
-    const service = new google.maps.places.PlacesService(
-      this.googleMap,
-    );
+    const service = new google.maps.places.PlacesService(this.googleMap);
     // Lancer la recherche des datas sur la map
     service.nearbySearch(request, this.getGooglePlacesDatas);
   }
@@ -74,11 +69,11 @@ class GoogleMap {
     // Vérification du chargement des données
     if (status == google.maps.places.PlacesServiceStatus.OK) {
       document.dispatchEvent(
-        new CustomEvent('AvailableResults', {
+        new CustomEvent("AvailableResults", {
           detail: {
             results: results,
           },
-        }),
+        })
       );
       this.detectMapMove();
     } else {
@@ -101,14 +96,14 @@ class GoogleMap {
 
   // Méthode de détection des mouvements sur map pour affichage restaurants
   detectMapMove() {
-    this.googleMap.addListener('bounds_changed', () => {
-      document.dispatchEvent(new Event('mapMoving'));
+    this.googleMap.addListener("bounds_changed", () => {
+      document.dispatchEvent(new Event("mapMoving"));
     });
   }
 
   // Méthode en cas d'échec de chargement de la map
   failure() {
-    alert('Mauvaise connexion ! Rafraîchir la page');
+    alert("Mauvaise connexion ! Rafraîchir la page");
   }
 }
 

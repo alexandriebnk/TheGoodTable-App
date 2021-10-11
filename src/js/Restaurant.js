@@ -39,7 +39,7 @@ class Restaurant {
   // Méthode pour générer une image unique
   getDynamicSource() {
     const random = Math.floor(Math.random() * 50);
-    this.imgSource = `/img/restaurants/${random}.jpg`;
+    this.imgSource = `../img/restaurants/${random}.jpg`;
   }
 
   // Méthode pour générer commentaires étoilés aléatoirement selon restaurant
