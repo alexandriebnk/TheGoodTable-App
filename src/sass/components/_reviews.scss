@@ -1,0 +1,14 @@
+.reviews {
+    width: 100%;
+
+    @include flexColumn;
+
+    @include respondTo(tablet-landscape) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include respondTo(desktop) {
+        margin-top: .5rem;
+    }
+}

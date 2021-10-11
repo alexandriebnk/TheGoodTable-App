@@ -1,0 +1,29 @@
+.list__top {
+        width: 87%;
+        justify-content: space-between;
+        margin: auto;
+        border-bottom: .1rem solid $darkPink;
+        padding-bottom: 1.3rem;
+
+        @include flexRow;
+
+    &-title {
+        font-family: $fontSerif;
+        font-weight: normal;
+        color: $darkPink;
+        font-size: 3rem;
+
+        @include respondTo(tablet) {
+            font-size: 4rem;
+        }
+
+        @include respondTo(tablet-landscape) {
+            font-size: 3.5rem;
+        }
+
+        @include respondTo(big-desktop) {
+            font-size: 5.5rem;
+            margin-top: -.5rem;
+        }
+    }
+}

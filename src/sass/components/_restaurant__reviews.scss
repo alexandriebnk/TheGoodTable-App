@@ -1,0 +1,52 @@
+.restaurant__reviews {
+    height: 35rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    z-index: 0;
+
+    @include respondTo(tablet-landscape) {
+        width: 48%;
+        margin-bottom: 0;
+    }
+
+    &-title {
+        width: 88%;
+        margin: auto;
+
+        @include layerTitle;
+
+        @include respondTo(tablet) {
+            font-size: 4rem;
+        }
+
+        @include respondTo(tablet-landscape) {
+            font-size: 2.5rem;
+            padding-bottom: .8rem;
+        }
+
+        @include respondTo(big-desktop) {
+            font-size: 3.5rem; 
+        }
+    }
+
+    &-list {
+        justify-content: space-between;
+        height: 30rem;
+        width: 100%;
+        margin: 1.5 auto 0 auto;
+        padding: 2rem 6%;
+        overflow: hidden;
+
+        @include flexColumn;
+
+        @include respondTo(big-desktop) {
+            height: 45rem;
+        }
+    }
+
+    &-all {
+        display: block;
+        overflow: auto;
+        width: 100%;
+    }
+}

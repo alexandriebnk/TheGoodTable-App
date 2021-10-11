@@ -1,0 +1,84 @@
+.users {
+
+    &__review {
+    justify-content: flex-start;
+    padding: 1.1rem 0;
+
+    @include flexColumn;
+
+        @include respondTo(tablet-landscape) {
+            padding: 1rem 0;
+        }
+
+        &-content {
+            font-family: $fontSansSerif;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            margin-bottom: .9rem;
+
+            @include respondTo(tablet) {
+                font-size: 2rem;
+                line-height: 2.3rem;
+                margin-bottom: 1.4rem;
+            }
+
+            @include respondTo(tablet-landscape) {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+            }
+
+           @include respondTo(big-desktop) {
+                font-size: 2rem;
+                line-height: 2.6rem;
+            }
+        }
+
+        &-notation {
+            padding-left: .2rem;
+
+            @include flexRow;
+
+            @include respondTo(tablet) {
+                padding-left: 1.4rem;
+            }
+            @include respondTo(tablet-landscape) {
+                padding-left: .2rem;
+            }
+
+            @include respondTo(big-desktop) {
+                padding-left: 1rem;
+            }
+        }
+
+        &-star {
+            transform: scale(1.1);
+            margin: 1rem -.5rem 0 0;
+
+                @include respondTo(tablet) {
+                    transform: scale(1.9);
+                    margin: 3rem .3rem 0 0;
+                }
+
+                @include respondTo(tablet-landscape) {
+                    transform: scale(1.1);
+                    margin: .7rem -.8rem 0 0;
+                }
+
+                @include respondTo(desktop) {
+                    transform: scale(1.2);
+                    margin: 1rem -.8rem 0 0;
+                }
+
+                @include respondTo(big-desktop) {
+                    transform: scale(1.7);
+                    margin: 2rem 0 0 0;
+                }
+        }
+
+        &-encouragement {
+            color: $grey;
+            font-size: 1.3rem;
+            margin: auto;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.right {
+    position: relative;
+    height: 70rem;
+    width: 100%;
+    margin-top: 1.5rem;
+
+    @include respondTo(tablet-landscape) {
+        position: relative;
+        width: 40%;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Migra";
+  src: url("../../fonts/Migra-Extralight.woff2") format("woff2"),
+    url("../../fonts/Migra-Extralight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Natural";
+  src: url("../../fonts/NON-Natural-Grotesk-Light.woff2") format("woff2"),
+    url("../../fonts/NON-Natural-Grotesk-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+$fontSerif: "Migra", serif;
+$fontSansSerif: "Natural", sans-serif;

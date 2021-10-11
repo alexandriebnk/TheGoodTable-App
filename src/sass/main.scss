@@ -1,0 +1,31 @@
+@import 'abstracts/fonts';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'components/concept';
+@import 'components/list__top';
+@import 'components/filter';
+@import 'components/list__restaurants';
+@import 'components/items';
+@import 'components/button';
+@import 'components/presentation';
+@import 'components/backward';
+@import 'components/reviews';
+@import 'components/restaurant__reviews';
+@import 'components/users__review';
+@import 'components/add__review';
+@import 'components/personal__review';
+@import 'components/review__send';
+@import 'components/newRestaurant';
+@import 'components/newRestaurant__send';
+@import 'components/highlight';
+
+@import 'layout/header';
+@import 'layout/left';
+@import 'layout/right';
+@import 'layout/sections';
+@import 'layout/layer__restaurant';
+
+@import 'page/home';
+@import 'page/loading__page';
+@import 'page/main-app';

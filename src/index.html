@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Alexandrie Benkiki" />
+    <meta
+      name="description"
+      content="Application pour trouver, ajouter et noter des restaurants"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha51top-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFwtopyuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <title>The Good Table</title>
+  </head>
+
+  <body>
+    <div class="loading__page">
+      <div class="loader">
+        <img src="img/loader.svg" class="loader__img" alt="loader" />
+        <div class="loader__line">
+          <p class="loader__line-under"></p>
+          <p class="loader__line-on"></p>
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__presentation">
+        <h1 class="header__presentation-title">
+          <span>The</span> <span>Good</span> <span>Table</span>
+        </h1>
+        <img src="img/dish.png" class="header__presentation-img" alt="dish" />
+      </div>
+    </header>
+
+    <section class="concept">
+      <div class="concept__presentation">
+        <h2 class="concept__presentation-title">CONCEPT</h2>
+        <p class="concept__presentation-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip.
+        </p>
+      </div>
+    </section>
+
+    <div class="main-app">
+      <div class="left">
+        <section class="map"></section>
+
+        <section class="layer__restaurant">
+          <div class="restaurants">
+            <div class="presentation">
+              <div class="presentation__details">
+                <h2 class="presentation__details-title"></h2>
+                <div class="presentation__details-notation"></div>
+              </div>
+              <div class="backward">
+                <img
+                  src="img/backward.svg"
+                  class="backward__img"
+                  alt="backward__img"
+                />
+                <p class="backward__paragraph">Voir la liste</p>
+              </div>
+            </div>
+
+            <div class="reviews">
+              <div class="restaurant__reviews">
+                <h2 class="restaurant__reviews-title">Commentaires</h2>
+                <div class="restaurant__reviews-list">
+                  <div class="restaurant__reviews-all">
+                    <div class="users__review"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="add">
+                <div class="add__review">
+                  <h2 class="add__review-title">Ajouter un commentaire</h2>
+                  <div class="add__review-content personal__review">
+                    <div class="personal__content">
+                      <textarea
+                        type="text"
+                        id="personal__content-paragraph"
+                        class="personal__content-paragraph"
+                        placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+                      ></textarea>
+                    </div>
+                    <div class="personal__notation">
+                      <img
+                        src="img/star.svg"
+                        class="personal__notation-star"
+                        alt="star"
+                      />
+                      <img
+                        src="img/star.svg"
+                        class="personal__notation-star"
+                        alt="star"
+                      />
+                      <img
+                        src="img/star.svg"
+                        class="personal__notation-star"
+                        alt="star"
+                      />
+                      <img
+                        src="img/star.svg"
+                        class="personal__notation-star"
+                        alt="star"
+                      />
+                      <img
+                        src="img/star.svg"
+                        class="personal__notation-star"
+                        alt="star"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="review__send">
+                  <button class="review__validation">Valider</button>
+                  <p class="review__annulation">Annuler</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="right">
+        <section class="list">
+          <div class="list__top">
+            <h2 class="list__top-title">Restaurants</h2>
+            <div class="filter">
+              <p class="filter__title">Filtrer</p>
+              <div class="filter__stars">
+                <img
+                  src="img/star.svg"
+                  class="filter__stars-light"
+                  alt="star"
+                />
+                <img
+                  src="img/star.svg"
+                  class="filter__stars-light"
+                  alt="star"
+                />
+                <img
+                  src="img/star.svg"
+                  class="filter__stars-light"
+                  alt="star"
+                />
+                <img
+                  src="img/star.svg"
+                  class="filter__stars-light"
+                  alt="star"
+                />
+                <img
+                  src="img/star.svg"
+                  class="filter__stars-light"
+                  alt="star"
+                />
+              </div>
+              <div class="filter__reset">
+                <img
+                  src="img/close.svg"
+                  class="filter__reset-svg"
+                  alt="reset"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="list__restaurants">
+            <div class="list__restaurants-all"></div>
+            <div class="button">
+              <button class="button__add">Ajouter</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="newRestaurant">
+          <div class="newRestaurant__elements">
+            <h2 class="newRestaurant__elements-title">Nouveau restaurant</h2>
+            <p class="newRestaurant__elements-paragraph">
+              Renseigne le nom du restaurant puis clique sur la map pour valider
+              la localisation
+            </p>
+            <textarea
+              type="text"
+              maxlength="25"
+              id="newRestaurant__elements-content"
+              class="newRestaurant__elements-content"
+              placeholder="Nom du restaurant"
+            ></textarea>
+            <div class="newRestaurant__send">
+              <button class="newRestaurant__validation">Ajouter</button>
+              <p class="newRestaurant__annulation">Annuler</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALe1-urleaoM1CH8dv7Es_XTdS_L7OW5M&libraries=places"></script>
+  </body>
+</html>

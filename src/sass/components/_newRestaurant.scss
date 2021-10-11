@@ -1,0 +1,63 @@
+.newRestaurant__elements {
+    position: absolute;
+    width: 90%;
+    
+    @include topLeftTranslate;
+
+    @include respondTo(tablet-landscape) {
+        top: 17.5rem;
+    }
+
+    &-title {
+        font-family: $fontSerif;
+        font-weight: normal;
+        color: $darkPink;
+        font-size: 3.5rem;
+        border-bottom: .1rem solid $darkPink;
+        padding-bottom: 1rem;
+
+        @include respondTo(tablet) {
+            font-size: 4rem;
+        }
+
+        @include respondTo(big-desktop) {
+            font-size: 5.5rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &-paragraph {
+        font-family: $fontSansSerif;
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+        margin-top: 3rem;
+
+        @include respondTo(big-desktop) {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+    }
+
+    &-content {
+        font-family: $fontSansSerif;
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        height: 4rem;
+        width: 100%;
+        margin: 4rem 0 1rem 0;
+        border: none;
+        resize: none;
+
+        &::placeholder {
+            color: $grey;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        @include respondTo(big-desktop) {
+            font-size: 2rem;
+        }
+    }
+}

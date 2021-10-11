@@ -1,0 +1,41 @@
+.backward {
+    position: absolute;
+    align-items: center;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.5rem;
+    cursor: pointer;
+
+    @include flexRow;
+
+    @include respondTo(tablet-landscape) {
+        bottom: 3rem;
+    }
+
+    @include respondTo(big-desktop) {
+        bottom: 4rem; 
+    }
+
+    &__img {
+        height: 2.6rem;
+        width: 3.3rem;
+
+        @include respondTo(big-desktop) {
+            height: 4rem;
+            width: 5rem;
+        }
+    }
+
+    &__paragraph {
+        color: $white;
+        font-family: $fontSansSerif;
+        font-size: 1.3rem;
+        margin-left: .5rem;
+
+        @include respondTo(big-desktop) {
+            font-size: 1.9rem;
+            margin-left: 1rem;
+        }
+    }
+}

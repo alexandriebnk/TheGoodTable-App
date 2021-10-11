@@ -1,0 +1,71 @@
+.personal {
+
+    &__content {
+        width: 100%;
+
+        &-paragraph {
+            font-family: $fontSansSerif;
+            height: 13rem;
+            width: 100%;
+            margin: 2.3rem 0 1rem 0;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            border: none;
+            resize: none;
+
+            &::placeholder {
+                color: $grey;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            @include respondTo(tablet) {
+                font-size: 2rem;
+            }
+
+            @include respondTo(tablet-landscape) {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+                margin: 2.3rem 0 5rem 0;
+            }
+
+            @include respondTo(big-desktop) {
+                height: 24rem;
+                font-size: 2rem;
+                line-height: 2.4rem;
+            }
+        }
+    }
+
+    &__notation {
+
+        &-star {
+            transform: scale(1.1);
+            opacity: .3;
+            margin-right: .4rem;
+
+                @include respondTo(tablet) {
+                    transform: scale(1.9);
+                    margin-right: 2rem;
+                }
+
+                @include respondTo(tablet-landscape) {
+                    transform: scale(1.1);
+                    margin-right: .4rem;
+                }
+
+                @include respondTo(desktop) {
+                    transform: scale(1.2);
+                }
+
+                @include respondTo(big-desktop) {
+                    transform: scale(1.7);
+                    margin-right: 1.5rem;
+                }
+        }
+    }
+}
+
+

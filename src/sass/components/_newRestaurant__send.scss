@@ -1,0 +1,62 @@
+.newRestaurant {
+        background-color: $white;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        opacity: 1;
+        z-index: 10;
+
+        @include respondTo(tablet-landscape) {
+            left: 100%;
+        }
+    
+    &__send {
+        width: 100%;
+        margin: 3rem auto 4rem auto;
+
+        @include flexRow;
+
+        @include respondTo(tablet-landscape) {
+            margin: 3rem auto 3.4rem auto;
+        }
+    }
+
+    &__validation {
+        cursor: pointer;
+
+        @include validationBtn;
+
+        @include respondTo(tablet) {
+            font-size: 2.2rem;
+        }
+
+        @include respondTo(tablet-landscape) {
+            height: 5rem;
+            width: 15rem;
+            font-size: 2rem;
+            margin-top: .5rem;
+        }
+
+        @include respondTo(big-desktop) {
+            height: 5.5rem;
+            width: 17rem;
+            font-size: 2.2rem;
+        }
+    }
+
+    &__annulation {
+        
+        @include cancelBtn;
+
+        @include respondTo(tablet-landscape) {
+            line-height: 6.1rem;
+        }
+
+       @include respondTo(big-desktop) {
+            font-size: 2rem;
+            line-height: 6.6rem;
+        }
+    }
+}

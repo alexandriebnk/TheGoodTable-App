@@ -1,0 +1,39 @@
+.add {
+    
+    @include respondTo(tablet-landscape) {
+        width: 48%;
+    }
+
+    &__review {
+    width: 88%;
+    margin: .6rem auto 0 auto;
+
+
+    @include respondTo(tablet-landscape) {
+        width: 100%;
+        margin: 0 auto 0 auto;
+    }
+
+        &-title {
+            width: 100%;
+            margin: 0 auto 0 auto;
+
+            @include layerTitle;
+
+           @include respondTo(tablet) {
+                font-size: 4rem;
+                margin: 3.5rem auto 0 auto;
+            }
+
+            @include respondTo(tablet-landscape) {
+                font-size: 2.5rem;
+                padding-bottom: .8rem;
+                margin: 1.5rem auto 0 auto;
+            }
+
+            @include respondTo(big-desktop) {
+                font-size: 3.5rem; 
+            }
+        }
+    }
+}

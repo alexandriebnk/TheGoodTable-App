@@ -1,0 +1,39 @@
+.button {
+    background-color: $white;
+    width: 100%;
+
+    &__add {
+        background-color: transparent;
+        display: block;
+        height: 6rem;
+        width: 17rem;
+        color: $darkPink;
+        font-family: $fontSerif;
+        font-size: 1.6rem;
+        border-radius: 5rem;
+        margin: 2.5rem 0 3rem 0;
+        border: .1rem solid $darkPink;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+
+        @include respondTo(tablet) {
+            font-size: 2.2rem;
+            margin: 5rem 0 3rem 0;
+        }
+
+        @include respondTo(tablet-landscape) {
+            height: 5rem;
+            width: 15rem;
+            font-size: 2rem;
+            margin: 4rem 0 3rem 0;
+        }
+
+        @include respondTo(big-desktop) {
+            height: 5.5rem;
+            width: 17rem;
+            font-size: 2.2rem;
+        }
+    }
+}

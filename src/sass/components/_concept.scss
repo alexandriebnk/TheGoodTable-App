@@ -1,0 +1,48 @@
+.concept {
+
+    &__presentation {
+        position: relative;
+        text-align: center;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include respondTo(desktop) {
+            width: 75%;
+            margin: 3rem 0;
+        }
+
+        &-title {
+            color: $darkPink;
+            font-family: $fontSerif;
+            font-weight: normal;
+            font-size: 3.5rem;
+            margin-bottom: 5rem;
+
+            @include respondTo(tablet-landscape) {
+                font-size: 5rem;
+            }
+
+            @include respondTo(big-desktop) {
+                font-size: 6rem;
+            }
+        }
+
+        &-paragraph {
+            display: block;
+            font-family: $fontSansSerif;
+            font-size: 1.4rem;
+            line-height: 2.6rem;
+
+            @include respondTo(tablet-landscape) {
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+
+            @include respondTo(big-desktop) {
+                font-size: 2.3rem;
+                line-height: 3.8rem;
+            }
+        }
+    }
+}

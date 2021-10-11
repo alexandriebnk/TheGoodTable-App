@@ -1,0 +1,71 @@
+.presentation {
+  position: relative;
+  background-size: cover;
+  height: 30rem;
+  width: 100%;
+
+  @include respondTo(tablet-landscape) {
+    height: 57%;
+  }
+
+  &__details {
+    position: absolute;
+    text-align: center;
+
+    @include topLeftTranslate;
+
+    &-title {
+      font-family: $fontSerif;
+      font-size: 3.5rem;
+      color: $darkPink;
+      //text-transform: uppercase;
+      text-transform: lowercase;
+      font-weight: normal;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      @include respondTo(big-desktop) {
+        font-size: 5.5rem;
+      }
+    }
+
+    &-notation {
+      justify-content: center;
+      height: 100%;
+
+      @include flexRow;
+
+      & > * {
+        transform: scale(1.1);
+        margin: 0 0.5 0 0;
+
+        @include respondTo(tablet) {
+          transform: scale(1.9);
+          margin: 1.3rem 0.6rem 0 0;
+        }
+
+        @include respondTo(tablet-landscape) {
+          transform: scale(1.1);
+          margin: 0.7rem 0 0 0;
+        }
+
+        @include respondTo(desktop) {
+          transform: scale(1.2);
+        }
+
+        @include respondTo(big-desktop) {
+          transform: scale(1.7);
+          margin: 0.7rem 1rem 0 0;
+        }
+      }
+
+      & p {
+        width: 100%;
+        font-size: 2rem;
+        color: $white;
+      }
+    }
+  }
+}

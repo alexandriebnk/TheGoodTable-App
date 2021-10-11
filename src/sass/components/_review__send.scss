@@ -1,0 +1,50 @@
+.review {
+
+    &__send {
+        width: 90%;
+        margin: 3rem auto 1rem auto;
+
+        @include flexRow;
+
+        @include respondTo(tablet-landscape) {
+            margin: 3rem auto 3.4rem auto;
+        }
+    }
+
+    &__validation {
+        
+        @include validationBtn;
+
+        @include respondTo(tablet-landscape) {
+            height: 5rem;
+            width: 15rem;
+            font-size: 2rem;
+            margin-top: .3rem;
+        }
+
+        @include respondTo(desktop) {
+            margin-top: .4rem;
+        }
+
+        @include respondTo(big-desktop) {
+            height: 5.5rem;
+            width: 17rem;
+            font-size: 2.2rem;
+            margin-top: .15rem;
+        }
+    }
+
+    &__annulation {
+        
+        @include cancelBtn;
+
+        @include respondTo(desktop) {
+            line-height: 6rem;
+        }
+
+        @include respondTo(big-desktop) {
+            font-size: 2rem;
+            line-height: 6rem;
+        }
+    }
+}

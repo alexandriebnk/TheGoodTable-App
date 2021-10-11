@@ -1,0 +1,78 @@
+// BREAKPOINTS POUR MIXIN
+$breakpoint-medium: 768px; //tablets
+$breakpoint-large: 992px; //tablets landscape 
+$breakpoint-xlarge: 1200px; //desktop
+$breakpoint-big: 1920px; //big desktop - 21pouces
+
+@mixin respondTo($media) {
+    @if $media == tablet {
+        @media (min-width: $breakpoint-medium) {
+            @content
+        }
+    } @else if $media == tablet-landscape {
+        @media (min-width: $breakpoint-large) {
+            @content
+        }
+    } @else if $media == desktop {
+        @media (min-width: $breakpoint-xlarge) {
+            @content
+        }
+    } @else if $media == big-desktop {
+        @media (min-width: $breakpoint-big) {
+            @content
+        }
+    } 
+}
+
+@mixin topLeftTranslate {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+  }
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+  }
+
+@mixin validationBtn {
+    background-color: transparent;
+    color: $grey;
+    font-family: $fontSerif;
+    font-size: 1.8rem;
+    height: 5rem;
+    width: 15rem;
+    border-radius: 5rem;
+    border: .1rem solid $grey;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+@mixin cancelBtn {
+    color: $darkPink;
+    font-family: $fontSerif;
+    font-size: 1.6rem;
+    height: 6rem;
+    width: 17rem;
+    margin-left: -2rem;
+    text-align: center;
+    line-height: 5.4rem;
+    cursor: pointer;
+  }
+
+@mixin layerTitle {
+    color: $darkPink;
+    font-family: $fontSerif;
+    font-weight: normal;
+    font-size: 3rem;
+    border-bottom: .1rem solid $darkPink;
+    padding-bottom: 1.3rem;
+}
+
+  

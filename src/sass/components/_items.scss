@@ -1,0 +1,113 @@
+.items {
+  &__img {
+    height: 9rem;
+    width: 13rem;
+    cursor: pointer;
+
+    @include respondTo(big-desktop) {
+      height: 13rem;
+      width: 20rem;
+    }
+  }
+
+  &__infos {
+    align-items: flex-start;
+    width: 20rem;
+    margin: auto 0 auto 2rem;
+    cursor: pointer;
+
+    @include flexColumn;
+
+    @include respondTo(tablet) {
+      width: 80%;
+      margin: auto 3rem auto 2rem;
+    }
+
+    @include respondTo(tablet-landscape) {
+      margin: auto 1rem auto 2rem;
+    }
+
+    @include respondTo(big-desktop) {
+      margin: auto 3rem auto 2rem;
+    }
+
+    &-title {
+      display: block;
+      font-family: $fontSansSerif;
+      font-size: 1.6rem;
+      width: 100%;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      text-transform: lowercase;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: normal;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      @include respondTo(tablet) {
+        font-size: 2.6rem;
+      }
+
+      @include respondTo(tablet-landscape) {
+        font-size: 1.9rem;
+      }
+
+      @include respondTo(big-desktop) {
+        font-size: 2.5rem;
+      }
+    }
+
+    &-notation {
+      justify-content: space-between;
+      text-align: start;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+
+      @include flexRow;
+
+      @include respondTo(tablet) {
+        font-size: 3rem;
+        padding-left: 1.3rem;
+      }
+
+      @include respondTo(tablet-landscape) {
+        margin-top: 0.4rem;
+        font-size: 2rem;
+        padding-left: 0.1rem;
+      }
+
+      @include respondTo(big-desktop) {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+.star-restaurant {
+  color: $darkPink;
+  transform: scale(1.1);
+  margin: -1rem 0 0 0;
+
+  @include respondTo(tablet) {
+    transform: scale(1.9);
+    margin: 1.5rem 1rem 0 0;
+  }
+
+  @include respondTo(tablet-landscape) {
+    transform: scale(1.1);
+    margin: 0 -0.3rem 0 0;
+  }
+
+  @include respondTo(desktop) {
+    transform: scale(1.2);
+  }
+
+  @include respondTo(big-desktop) {
+    transform: scale(1.7);
+    margin: 1rem 1rem 0 0;
+  }
+}
