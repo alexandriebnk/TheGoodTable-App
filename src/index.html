@@ -8,14 +8,11 @@
       content="Application pour trouver, ajouter et noter des restaurants"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha51top-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFwtopyuvEpDL9wQ=="
-      crossorigin=""
-    />
-    <link rel="icon" href="img/thegoodtable-favicon-32x32.png" type="image/png" size="32x32">
-    <link rel="icon" href="img/thegoodtable-favicon-16x16.png" type="image/png" size="16x16">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""/>
+    <link rel="icon" href="img/thegoodtable-favicon-32x32.png" type="image/png" data-res="32x32">
+    <link rel="icon" href="img/thegoodtable-favicon-16x16.png" type="image/png" data-res="16x16">
     <title>The Good Table</title>
   </head>
 
@@ -43,23 +40,20 @@
       <div class="concept__presentation">
         <h2 class="concept__presentation-title">CONCEPT</h2>
         <p class="concept__presentation-paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip.
+          Cherchez ... trouvez ! <br /> The Good Table permet à chacun de dénicher la petite pépite gastronomique du moment. Grâce à ses nombreux restaurants répertoriés par les clients, ainsi que les commentaires ajoutés, soyez sûr de vous régaler !
         </p>
       </div>
     </section>
 
     <div class="main-app">
       <div class="left">
-        <section class="map"></section>
+        <div class="map"></div>
 
         <section class="layer__restaurant">
           <div class="restaurants">
             <div class="presentation">
               <div class="presentation__details">
-                <h2 class="presentation__details-title"></h2>
+                <h2 class="presentation__details-title">#</h2>
                 <div class="presentation__details-notation"></div>
               </div>
               <div class="backward">
@@ -87,10 +81,9 @@
                   <div class="add__review-content personal__review">
                     <div class="personal__content">
                       <textarea
-                        type="text"
                         id="personal__content-paragraph"
                         class="personal__content-paragraph"
-                        placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+                        placeholder="N'hésitez pas à donner votre avis !"
                       ></textarea>
                     </div>
                     <div class="personal__notation">
@@ -190,7 +183,6 @@
               la localisation
             </p>
             <textarea
-              type="text"
               maxlength="25"
               id="newRestaurant__elements-content"
               class="newRestaurant__elements-content"

@@ -27,13 +27,13 @@
         }
 
         &-title {
-            font-family: $fontSerif;
+            font-family: "Migra";
+            font-weight: 100 !important;
             position: absolute;
             justify-content: space-between;
             color: $darkPink;
-            max-width: 160rem;
+            max-width: 156rem;
             font-size: 12rem;
-            font-weight: normal;
             line-height: 7.5rem;
             overflow: hidden;
             z-index: 1;

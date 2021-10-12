@@ -54,10 +54,6 @@ module.exports = {
           },
         ],
       },
-      /*{
-        test: /\.html?$/,
-        use: ["html-loader"],
-      },*/
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,

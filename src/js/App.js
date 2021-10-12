@@ -333,7 +333,7 @@ class SearchApp {
     });
   }
 
-  // M2thode pour n'afficher que les restaurants dont markers visibles sur map
+  // Méthode pour n'afficher que les restaurants dont markers visibles sur map
   displayVisiblesMarkers() {
     this.filteredRestaurants.forEach((restaurant) => {
       // Si marker est toujours dans la map
@@ -478,7 +478,7 @@ class SearchApp {
 
   // Méthode pour afficher nom du restaurant au click
   displayNameRestaurant(name) {
-    document.querySelector(".presentation__details-title").innerHTML = name;
+    this.DOM.restaurantTitleInput.innerHTML = name;
   }
 
   // Méthode pour afficher étoiles du restaurant au click
