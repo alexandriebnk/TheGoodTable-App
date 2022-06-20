@@ -1,101 +1,99 @@
 .header {
-    background-color: $lightPink;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 3rem;
+  background-color: $lightPink;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 3rem;
+
+  @include respondTo(tablet-landscape) {
+    padding-top: 0;
+  }
+
+  &__presentation {
+    position: relative;
+    height: 100%;
+    width: 75%;
+    margin: auto;
+
+    @include respondTo(tablet) {
+      width: 70%;
+    }
 
     @include respondTo(tablet-landscape) {
-        padding-top: 0;
+      width: 85%;
     }
 
-    &__presentation {
-        position: relative;
-        height: 100%;
-        width: 75%;
-        margin: auto;
-
-        @include respondTo(tablet) {
-            width: 70%;
-        }
-
-        @include respondTo(tablet-landscape) {
-            width: 85%;
-        }
-
-        @include respondTo(desktop) {
-            width: 80%;   
-        }
-
-        &-title {
-            font-family: "Migra";
-            font-weight: 100 !important;
-            position: absolute;
-            justify-content: space-between;
-            color: $darkPink;
-            max-width: 110rem;
-            font-size: 12rem;
-            line-height: 7.5rem;
-            overflow: hidden;
-            z-index: 1;
-
-            @include flexColumn;
-
-            @include respondTo(tablet) {
-                font-size: 18rem;
-                line-height: 15rem;
-            }
-
-            @include respondTo(tablet-landscape) {
-                width: 100%;
-                flex-direction: row;
-                line-height: 13rem;
-                font-size: 15rem; 
-                
-                @include topLeftTranslate;
-            }
-
-            @include respondTo(desktop) {
-                font-size: 20rem; 
-            }
-
-            @include respondTo(big-desktop) {
-                line-height: 20rem;
-                font-size: 27rem;
-            }
-
-            & > span {
-                padding-top: 4rem;
-                display: block;
-                opacity: 0;
-            } 
-        }
-    
-        &-img {
-            position: absolute;
-            top: 42%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 0;
-
-            @include respondTo(tablet) {
-                transform: scale(1.73) translateX(-50%);
-                transform-origin: top left;
-                top: 46%;
-            }
-
-           @include respondTo(tablet-landscape) {
-                transform: scale(1.45) translate(-50%, -50%);
-                top: 50%;
-            }
-
-            @include respondTo(desktop) {
-                transform: scale(1.7) translate(-50%, -50%);
-            }
-
-            @include respondTo(big-desktop) {
-                transform: scale(2.6) translate(-50%, -50%);
-            }
-        }
+    @include respondTo(desktop) {
+      width: 80%;
     }
+
+    &-title {
+      font-family: "Migra";
+      font-weight: 100 !important;
+      position: absolute;
+      justify-content: space-between;
+      color: $darkPink;
+      max-width: 110rem;
+      font-size: 12rem;
+      line-height: 7.5rem;
+      overflow: hidden;
+      z-index: 1;
+
+      @include flexColumn;
+
+      @include respondTo(tablet) {
+        font-size: 18rem;
+        line-height: 15rem;
+      }
+
+      @include respondTo(tablet-landscape) {
+        width: 100%;
+        flex-direction: row;
+        line-height: 13rem;
+        font-size: 15rem;
+
+        @include topLeftTranslate;
+      }
+
+      @include respondTo(desktop) {
+        font-size: 18rem;
+      }
+
+      @include respondTo(big-desktop) {
+        line-height: 20rem;
+      }
+
+      & > span {
+        padding-top: 4rem;
+        display: block;
+        opacity: 0;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+
+      @include respondTo(tablet) {
+        transform: scale(1.73) translateX(-50%);
+        transform-origin: top left;
+        top: 46%;
+      }
+
+      @include respondTo(tablet-landscape) {
+        transform: scale(1.45) translate(-50%, -50%);
+        top: 50%;
+      }
+
+      @include respondTo(desktop) {
+        transform: scale(1.7) translate(-50%, -50%);
+      }
+
+      @include respondTo(big-desktop) {
+        transform: scale(2.6) translate(-50%, -50%);
+      }
+    }
+  }
 }
-
